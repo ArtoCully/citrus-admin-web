@@ -1,9 +1,35 @@
 // @flow
 import fs from 'fs'
 import Boom from 'boom'
-import { find, findIndex } from 'lodash'
+import { find, findIndex, filter } from 'lodash'
 import { typeId, typeBody } from 'server/schemas/deviceType'
-import { deviceTypes } from 'server/data'
+import { devices, deviceTypes } from 'server/data'
+
+const applyChangesToDevices = (deviceType, isDeleted) => {
+
+  const devicesToChange = filter(devices, (device) => {
+
+    const { type = {} } = device
+    return `${type.id}` === `${deviceType.id}`
+
+  })
+  devicesToChange.forEach((device) => {
+
+    const index = findIndex(devices, { id: device.id })
+    if (index >= 0) {
+
+      const type = isDeleted ? null : deviceType
+      devices[index] = {
+        ...device,
+        type,
+      }
+      fs.writeFile('server/data/devices.json', JSON.stringify(devices))
+
+    }
+
+  })
+
+}
 
 export default [
   {
@@ -70,6 +96,7 @@ export default [
           ...request.payload,
         }
         fs.writeFile('server/data/deviceTypes.json', JSON.stringify(deviceTypes))
+        applyChangesToDevices(deviceTypes[index])
         reply(deviceTypes[index])
 
       }
@@ -92,6 +119,7 @@ export default [
 
         deviceTypes.splice(index, 1)
         fs.writeFile('server/data/deviceTypes.json', JSON.stringify(deviceTypes))
+        applyChangesToDevices(deviceTypes[index], true)
         reply({ success: true })
 
       }
