@@ -1,0 +1,9 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.rightSide {
+  flex-grow: 1;
+  overflow-y: scroll;
+}

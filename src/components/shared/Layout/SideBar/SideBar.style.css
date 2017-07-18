@@ -1,0 +1,39 @@
+.sideBar {
+  height: 100vh;
+  width: 15%;
+  min-width: 210px;
+  background-color: $colorTheme;
+  padding: $s3;
+}
+
+.logoImage {
+  width: 100%;
+  min-height: 100px;
+}
+
+.menuLinks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @mixin font-size 20;
+}
+
+.link {
+  color: $colorWhite;
+  text-align: center;
+  margin-top: 20px;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.active {
+  border-left: $s2 solid black;
+  margin: 0;
+  font-weight: bolder;
+}
+
+.active:visited {
+  color: black;
+}

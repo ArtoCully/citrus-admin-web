@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-assign",
+    "lodash",
+  ],
+  "presets": [
+    ["env", {
+      "loose": true,
+      "modules": false
+    }],
+    "react",
+    "stage-3"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-class-properties",
+        "transform-object-assign",
+        "lodash",
+      ],
+      "presets": [
+        ["env", {
+          "loose": true,
+          "modules": "commonjs"
+        }],
+        "react",
+        "stage-3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* Requires images to be named according to mixins */
+
+/* PNGs */
+.logo {
+  @mixin image logo, 64, 64;
+}
+
+.logoHeader {
+  @mixin image logo_header-white, 100, 50;
+}
+
+.icnBoxSearch {
+  @mixin image icn_box_search, 18, 17;
+}
+
+.icnTrash {
+  @mixin image cell-trash, 15, 19;
+}
+
+.icnArrowDown {
+  @mixin image arrow-dropdown, 20, 8;
+}
+
+.twitterActions {
+  @mixin image twitter-actions, 90, 13;
+}
+
+.defaultAvatar {
+  @mixin image default-avatar, 50, 50;
+}
+
+.arrowSort {
+  @mixin image arrow-sort, 10, 7;
+}
+
+/* JPGs */
+/*
+.jpgImage {
+  @mixin image-jpg jpg-image, 2560, 1786;
+
+  @media (max-width: $screenSmMax) {
+    @mixin image-jpg jpg-image-mobile, 827, 1786;
+    background-size: cover;
+  }
+}
+*/
+
+
+/* One-off (no @2x version) */
+/*
+.logo {
+  @mixin image-url images/logo.png, 64, 64;
+}
+*/

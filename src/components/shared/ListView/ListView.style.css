@@ -1,0 +1,67 @@
+.list {
+  margin-top: $s3;
+  margin-bottom: $s3;
+}
+.item {
+  display: flex;
+  border: 1px solid $colorGray;
+  border-radius: $borderRadius;
+  margin: $s2 0;
+  @mixin font-size 13;
+  justify-content: space-between;
+  align-items: center;
+}
+.item:hover {
+  background-color: $colorGrayLight;
+  color: $colorDark;
+
+  .seeMoreLink {
+    opacity: 1;
+  }
+}
+.detailsLink {
+  color: $colorDark;
+  padding: $s3;
+  flex: 96;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailsLink:hover {
+  color: $colorDark;
+}
+.leftSide {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-weight: bold;
+  @mixin font-size 15;
+}
+.description {
+  width: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.seeMoreLink {
+  opacity: 0;
+  color: $colorTheme;
+  @mixin font-size 13;
+  font-weight: 900;
+  transition: opacity .5s ease-in-out;
+}
+.announcement {
+  display: flex;
+  justify-content: space-between;
+}
+.flex1 {
+  flex-grow: 1;
+}
+.noBorder {
+  border: 0;
+}
+.deleteItem {
+  z-index: 100;
+  flex: 4;
+}
