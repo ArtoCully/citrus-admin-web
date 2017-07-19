@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.container {
+  display: flex;
+}
+
+.column {
+  width: 25%;
+  border-top: rgba(0, 0, 0, 0.1) solid 1px;
+  padding: .5% 1%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.textInput {
+  border-bottom: 1px solid #222;
+}
+
+.clickable {
+  cursor: pointer;
+  margin-right: 3px;
+}
+
+.option {
+  margin-top: 3px;
+  text-transform: capitalize;
+}
