@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeleteDevice> renders the DeleteDevice content 1`] = `
+<div
+  className="deleteDevice"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="title"
+    >
+      DELETE ANNOUNCEMENT
+    </div>
+    <div
+      className="pt4 pb4"
+    >
+      Are you sure you want to delete 
+      ?
+    </div>
+  </div>
+  <LinkReplace
+    to="/"
+  >
+    <button
+      className="btnCancel"
+    >
+      Cancel
+    </button>
+  </LinkReplace>
+  <LinkReplace
+    to="/"
+  >
+    <button
+      className="btnDelete ml2"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </LinkReplace>
+</div>
+`;

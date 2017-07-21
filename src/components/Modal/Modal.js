@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import { isBrowser } from 'config/env'
+import DeleteDevice from './DeleteDevice/DeleteDevice.index'
 import DeleteDeviceType from './DeleteDeviceType/DeleteDeviceType.index'
 import DeleteTypeControl from './DeleteTypeControl/DeleteTypeControl.index'
 import css from './Modal.style.css'
@@ -21,6 +22,8 @@ const getStateModal = (props: Props): ?React$Element<any> => {
 
   switch (location.state.modal) {
 
+    case 'delete-device':
+      return <DeleteDevice {...props} />
     case 'delete-device-type':
       return <DeleteDeviceType {...props} />
     case 'delete-type-control':

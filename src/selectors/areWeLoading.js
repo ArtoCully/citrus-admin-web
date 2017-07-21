@@ -7,6 +7,12 @@ const getInitLoading = (state) => {
 
 }
 
+const getDevice = (state) => {
+
+  return state.device.isFetching
+
+}
+
 const getDeviceType = (state) => {
 
   return state.deviceType.isFetching
@@ -22,16 +28,19 @@ const getUiLoading = (state) => {
 
 const areWeLoading = createSelector([
   getInitLoading,
+  getDevice,
   getDeviceType,
   getUiLoading,
 ], (
   initLoading,
+  device,
   deviceType,
   uiLoading,
 ) => {
 
   if (
     initLoading
+    || device
     || deviceType
     || uiLoading
   ) {
