@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-top: rgba(0, 0, 0, 0.1) solid 1px;
+}
+
+.column {
+  width: 33%;
+  /*border-top: rgba(0, 0, 0, 0.1) solid 1px;*/
+  padding: .5% 1% 1% 1%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.rowButton {
+  padding: 0 3%;
+}

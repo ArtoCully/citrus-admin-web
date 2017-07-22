@@ -4,6 +4,8 @@ exports[`<LoadingIndicator> renders the LoadingIndicator content 1`] = `
 <div
   className="loading"
 >
-  Loading...
+  <div
+    className="movingBar"
+  />
 </div>
 `;

@@ -4,6 +4,7 @@ import { Route, IndexRedirect } from 'react-router'
 
 import App from 'src/components/App.index'
 import DeviceList from 'src/components/DeviceList/DeviceList.index'
+import DeviceControls from 'src/components/DeviceControls/DeviceControls.index'
 import DeviceTypeList from 'src/components/DeviceTypeList/DeviceTypeList.index'
 import DeviceTypeControls from 'src/components/DeviceTypeControls/DeviceTypeControls.index'
 import NotFound from 'src/components/NotFound/NotFound.index'
@@ -15,6 +16,7 @@ const getRoutes = () => {
       <IndexRedirect to="devices" />
 
       <Route path="devices" component={DeviceList} />
+      <Route path="device/:deviceId/controls" component={DeviceControls} />
       <Route path="types" component={DeviceTypeList} />
       <Route path="type/:typeId/controls" component={DeviceTypeControls} />
 
@@ -24,6 +26,5 @@ const getRoutes = () => {
   )
 
 }
-
 
 export default getRoutes

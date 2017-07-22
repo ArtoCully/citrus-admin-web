@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DeleteDevice> renders the DeleteDevice content 1`] = `
+exports[`<DeleteTypeControl> renders the DeleteTypeControl content 1`] = `
 <div
-  className="deleteDevice"
+  className="deleteTypeControl"
 >
   <div
     className="header"
@@ -10,7 +10,7 @@ exports[`<DeleteDevice> renders the DeleteDevice content 1`] = `
     <div
       className="title"
     >
-      DELETE DEVICE
+      DELETE TYPE CONTROL
     </div>
     <div
       className="pt4 pb4"
