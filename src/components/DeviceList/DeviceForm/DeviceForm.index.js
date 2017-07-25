@@ -48,7 +48,17 @@ const onSubmit = (values, dispatch, props): Promise<*> => {
       ...deviceType,
     },
   }
-  if (values.id === undefined) {
+  if (props.isAdding) {
+
+    props.changeAddState()
+
+  }
+  if (props.isEditing) {
+
+    props.changeEditState(props.id)
+
+  }
+  if (!values.id) {
 
     return addDevices(device)(dispatch)
 

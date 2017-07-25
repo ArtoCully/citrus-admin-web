@@ -117,9 +117,10 @@ export default [
       const index = findIndex(deviceTypes, { id: request.params.id })
       if (index >= 0) {
 
+        const deviceType = { ...deviceTypes[index] }
         deviceTypes.splice(index, 1)
         fs.writeFile('server/data/deviceTypes.json', JSON.stringify(deviceTypes))
-        applyChangesToDevices(deviceTypes[index], true)
+        applyChangesToDevices(deviceType, true)
         reply({ success: true })
 
       }

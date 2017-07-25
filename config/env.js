@@ -36,7 +36,7 @@ const env: EnvState = {
   NODE_ENV: NODE_ENV || 'production',
 
   // App settings
-  API_URL: API_URL || 'http://localhost:3000',
+  API_URL: API_URL || '',
   ROOT_URL: ROOT_URL || 'http://localhost:3000',
   USE_MOCK_API: USE_MOCK_API === 'true' || false,
   SECURE_COOKIE: SECURE_COOKIE === 'true' || false,

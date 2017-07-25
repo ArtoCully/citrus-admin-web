@@ -49,7 +49,7 @@ const onSubmit = (values, dispatch, props): Promise<*> => {
 
   if (props.isEditing) {
 
-    props.changeEditState()
+    props.changeEditState(props.index)
 
   }
   return editDevices(device)(dispatch)

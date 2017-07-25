@@ -33,7 +33,17 @@ const validate = (values) => {
 
 const onSubmit = (values, dispatch, props): Promise<*> => {
 
-  if (values.id === undefined) {
+  if (props.isAdding) {
+
+    props.changeAddState()
+
+  }
+  if (props.isEditing) {
+
+    props.changeEditState(props.id)
+
+  }
+  if (!values.id) {
 
     return addDeviceTypes(values)(dispatch)
 

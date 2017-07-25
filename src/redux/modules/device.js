@@ -208,34 +208,7 @@ export const changeAddState = () => {
 
 }
 
-
 // thunk
-export const addDevices = (device: Object): Function => {
-
-  return (dispatch: Function) => {
-
-    return dispatch({
-      type: ADD_DEVICES,
-      payload: saveDevice(device),
-    })
-
-  }
-
-}
-
-export const editDevices = (device: Object): Function => {
-
-  return (dispatch: Function) => {
-
-    return dispatch({
-      type: EDIT_DEVICES,
-      payload: saveDevice(device),
-    })
-
-  }
-
-}
-
 export const fetchDevices = (): Function => {
 
   return (dispatch: Function) => {
@@ -249,6 +222,40 @@ export const fetchDevices = (): Function => {
 
 }
 
+export const addDevices = (device: Object): Function => {
+
+  return (dispatch: Function) => {
+
+    return dispatch({
+      type: ADD_DEVICES,
+      payload: saveDevice(device),
+    }).then(() => {
+
+      fetchDevices()(dispatch)
+
+    })
+
+  }
+
+}
+
+export const editDevices = (device: Object): Function => {
+
+  return (dispatch: Function) => {
+
+    return dispatch({
+      type: EDIT_DEVICES,
+      payload: saveDevice(device),
+    }).then(() => {
+
+      fetchDevices()(dispatch)
+
+    })
+
+  }
+
+}
+
 export const removeDevice = (deviceId: number): Function => {
 
   return (dispatch: Function) => {
@@ -256,6 +263,10 @@ export const removeDevice = (deviceId: number): Function => {
     return dispatch({
       type: REMOVE_DEVICES,
       payload: removeDeviceApi(deviceId),
+    }).then(() => {
+
+      fetchDevices()(dispatch)
+
     })
 
   }

@@ -45,14 +45,14 @@ const onSubmit = (values, dispatch, props): Promise<*> => {
     options: values.options,
     type: values.type,
   }
-  if (props.index) {
+  if (isNaN(props.index) || props.index <= 0) {
 
-    deviceType.controls.splice(props.index, 1, control)
+    deviceType.controls.push(control)
 
   }
   else {
 
-    deviceType.controls.push(control)
+    deviceType.controls.splice(props.index, 1, control)
 
   }
   if (props.isAdding) {
@@ -62,7 +62,7 @@ const onSubmit = (values, dispatch, props): Promise<*> => {
   }
   if (props.isEditing) {
 
-    props.changeEditState()
+    props.changeEditState(props.index)
 
   }
   return editDeviceTypes(deviceType)(dispatch)
