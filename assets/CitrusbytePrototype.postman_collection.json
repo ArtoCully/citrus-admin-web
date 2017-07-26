@@ -1,0 +1,310 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CitrusbytePrototype",
+		"_postman_id": "e5f1daed-beff-3aef-b785-e110f7c35fd9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "citrus",
+			"description": "",
+			"item": [
+				{
+					"name": "light/power",
+					"request": {
+						"url": "http://automation-prototype.herokuapp.com/citrus-light/power",
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devices",
+			"description": "",
+			"item": [
+				{
+					"name": "/device",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "josesito",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "dosko",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "santa fe 100",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device/:id",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device/device1500647481033",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "josesito",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "dosko",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "santa fe 100",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Livingroom Player\",\n  \"ip\": \"192.168.0.15\",\n  \"type\": {\n        \"id\": \"t1500913852234\",\n        \"name\": \"Samsung Audio\",\n        \"httpApi\": \"\",\n        \"controls\": [\n            {\n                \"type\": \"button\",\n                \"name\": \"Power\",\n                \"value\": false\n            },\n            {\n                \"type\": \"slider\",\n                \"name\": \"Volume\",\n                \"value\": 80\n            },\n            {\n                \"type\": \"select\",\n                \"name\": \"Playlist\",\n                \"options\": [\n                    \"AC/DC - thunderstruck\",\n                    \"Metallica - Nothing else matters\",\n                    \"Foo Fighters - Run\"\n                ],\n                \"value\": \"Metallica - Nothing else matters\"\n            }\n        ]\n    }\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device/:id",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device/d1500913944630",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Livingroom Player\",\n  \"ip\": \"192.168.0.15\",\n  \"type\": {\n        \"id\": \"t1500913852234\",\n        \"name\": \"Samsung Audio\",\n        \"httpApi\": \"\",\n        \"controls\": [\n            {\n                \"type\": \"button\",\n                \"name\": \"Power\",\n                \"value\": true\n            },\n            {\n                \"type\": \"slider\",\n                \"name\": \"Volume\",\n                \"value\": 60\n            },\n            {\n                \"type\": \"select\",\n                \"name\": \"Playlist\",\n                \"options\": [\n                    \"AC/DC - thunderstruck\",\n                    \"Metallica - Nothing else matters\",\n                    \"Foo Fighters - Run\"\n                ],\n                \"value\": \"Foo Fighters - Run\"\n            }\n        ]\n    }\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device/:id",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device/d1500913968687",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "devicesType",
+			"description": "",
+			"item": [
+				{
+					"name": "/device-type",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device-type",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "josesito",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "dosko",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "santa fe 100",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device-type/:id",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device-type/t1500913852234",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "josesito",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "apellido",
+									"value": "dosko",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "santa fe 100",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device-type",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device-type",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Samsung Audio\",\n    \"httpApi\": \"\",\n    \"controls\": [\n\t\t{\n\t\t\t\"type\": \"button\",\n\t\t\t\"name\": \"Power\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"slider\",\n\t\t\t\"name\": \"Volume\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"select\",\n\t\t\t\"name\": \"Playlist\",\n\t\t\t\"options\": [\n\t\t\t\t\"AC/DC - thunderstruck\",\n\t\t\t\t\"Metallica - Nothing else matters\"\n\t\t\t]\n\t\t}\n    ]\n }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device-type/:id",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device-type/t1500913852234",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Samsung Audio\",\n    \"httpApi\": \"\",\n    \"controls\": [\n\t\t{\n\t\t\t\"type\": \"button\",\n\t\t\t\"name\": \"Power\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"slider\",\n\t\t\t\"name\": \"Volume\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"select\",\n\t\t\t\"name\": \"Playlist\",\n\t\t\t\"options\": [\n\t\t\t\t\"AC/DC - thunderstruck\",\n\t\t\t\t\"Metallica - Nothing else matters\",\n\t\t\t\t\"Foo Fighters - Run\"\n\t\t\t]\n\t\t}\n    ]\n }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/device-type/:id",
+					"request": {
+						"url": "http://localhost:3000/api/v1/device-type/t1500913870699",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
